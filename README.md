@@ -1,5 +1,9 @@
 <div align="center">
 
+<img src="assets/logo.jpeg" alt="Mia Code logo" width="132"/>
+
+<br/><br/>
+
 <img src="assets/banner.svg" alt="Mia Code — an open-source, AI-powered coding agent" width="100%"/>
 
 <br/>
