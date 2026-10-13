@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Mia Code - an open-source, AI-powered coding agent">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07060F"/>
+      <stop offset="1" stop-color="#150B2B"/>
+    </linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9B7BFF"/>
+      <stop offset="1" stop-color="#5CE1E6"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5CE1E6" stop-opacity="0"/>
+      <stop offset="0.9" stop-color="#5CE1E6" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#5CE1E6" stop-opacity="0.7"/>
+    </linearGradient>
+    <radialGradient id="orbV" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9B7BFF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#9B7BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5CE1E6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#5CE1E6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#9B7BFF" stroke-opacity="0.12"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip"><rect width="1200" height="360" rx="20"/></clipPath>
+  </defs>
+  <style>
+    .mono{font-family:'SF Mono','JetBrains Mono','Fira Code',Consolas,'Courier New',monospace}
+    .sans{font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+    .blink{animation:blink 1s steps(2,start) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .tag{opacity:0;animation:tag 12s linear infinite}
+    @keyframes tag{0%{opacity:0}4%{opacity:1}28%{opacity:1}33%{opacity:0}100%{opacity:0}}
+    .pulse{animation:pulse 4s ease-in-out infinite}
+    @keyframes pulse{50%{opacity:.55}}
+  </style>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+
+    <circle cx="180" cy="60" r="260" fill="url(#orbV)">
+      <animate attributeName="cx" values="180;260;180" dur="14s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1040" cy="320" r="260" fill="url(#orbC)">
+      <animate attributeName="cx" values="1040;960;1040" dur="16s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- rotating rings -->
+    <g transform="translate(140 180)" fill="none" stroke="#9B7BFF">
+      <circle r="96" stroke-opacity="0.35" stroke-dasharray="4 10">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="40s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="66" stroke="#5CE1E6" stroke-opacity="0.4" stroke-dasharray="30 14">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="24s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#5CE1E6" stroke="none" class="pulse"/>
+    </g>
+    <g transform="translate(1060 180)" fill="none" stroke="#5CE1E6">
+      <circle r="96" stroke-opacity="0.35" stroke-dasharray="4 10">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="40s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="66" stroke="#9B7BFF" stroke-opacity="0.4" stroke-dasharray="30 14">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="6" fill="#9B7BFF" stroke="none" class="pulse"/>
+    </g>
+
+    <!-- rising particles -->
+    <g fill="#5CE1E6">
+      <circle cx="300" cy="340" r="2"><animate attributeName="cy" values="350;10" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="9s" repeatCount="indefinite"/></circle>
+      <circle cx="470" cy="340" r="1.6"><animate attributeName="cy" values="350;10" dur="12s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="12s" begin="2s" repeatCount="indefinite"/></circle>
+      <circle cx="720" cy="340" r="2"><animate attributeName="cy" values="350;10" dur="10s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="10s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="900" cy="340" r="1.6"><animate attributeName="cy" values="350;10" dur="13s" begin="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="13s" begin="4s" repeatCount="indefinite"/></circle>
+    </g>
+    <g fill="#9B7BFF">
+      <circle cx="380" cy="340" r="1.8"><animate attributeName="cy" values="350;10" dur="11s" begin="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="11s" begin="3s" repeatCount="indefinite"/></circle>
+      <circle cx="820" cy="340" r="2"><animate attributeName="cy" values="350;10" dur="8s" begin="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="8s" begin="5s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- scan line -->
+    <rect x="0" y="-120" width="1200" height="120" fill="url(#scan)">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="0 480" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- title -->
+    <text x="600" y="150" text-anchor="middle" class="sans" font-size="96" font-weight="800" letter-spacing="16" fill="url(#ac)" filter="url(#glow)">MIA CODE</text>
+    <text x="600" y="196" text-anchor="middle" class="sans" font-size="17" letter-spacing="7" fill="#B9C3D6">AN OPEN-SOURCE, AI-POWERED CODING AGENT</text>
+
+    <!-- rotating prompt lines -->
+    <g class="mono" font-size="21" fill="#5CE1E6" text-anchor="middle">
+      <text x="600" y="256" class="tag" style="animation-delay:0s">&gt; Scan my project and tell me what to improve.<tspan class="blink" fill="#9B7BFF"> ▌</tspan></text>
+      <text x="600" y="256" class="tag" style="animation-delay:4s">&gt; Fix the most important issues. Run the tests.<tspan class="blink" fill="#9B7BFF"> ▌</tspan></text>
+      <text x="600" y="256" class="tag" style="animation-delay:8s">&gt; Explain this project and how to run it.<tspan class="blink" fill="#9B7BFF"> ▌</tspan></text>
+    </g>
+
+    <text x="600" y="315" text-anchor="middle" class="mono" font-size="13" letter-spacing="4" fill="#8C97AD">OPEN SOURCE  ·  BYOK  ·  LOCAL-FIRST  ·  CROSS-PLATFORM</text>
+
+    <rect x="1" y="1" width="1198" height="358" rx="19" fill="none" stroke="url(#ac)" stroke-opacity="0.55" stroke-width="1.5"/>
+  </g>
+</svg>

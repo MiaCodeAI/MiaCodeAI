@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" role="img" aria-label="MiaCodeAI GitHub account with two orbiting repositories">
+  <defs>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9B7BFF"/>
+      <stop offset="1" stop-color="#5CE1E6"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9B7BFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#9B7BFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    text{font-family:'SF Mono','JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;text-anchor:middle}
+    .pulse{animation:pulse 3.5s ease-in-out infinite;transform-origin:450px 220px;transform-box:view-box}
+    @keyframes pulse{50%{transform:scale(1.15);opacity:.6}}
+  </style>
+
+  <rect x="1" y="1" width="898" height="438" rx="16" fill="#0A0814" stroke="#9B7BFF" stroke-opacity="0.25"/>
+
+  <!-- orbit paths -->
+  <g fill="none" stroke="#9B7BFF" stroke-opacity="0.28">
+    <circle cx="450" cy="220" r="120" stroke-dasharray="3 8"/>
+    <circle cx="450" cy="220" r="185" stroke-dasharray="3 12" stroke="#5CE1E6" stroke-opacity="0.22"/>
+  </g>
+
+  <!-- core -->
+  <circle cx="450" cy="220" r="80" fill="url(#core)" class="pulse"/>
+  <circle cx="450" cy="220" r="46" fill="#0F0B20" stroke="url(#ac)" stroke-width="2" filter="url(#glow)"/>
+  <text x="450" y="217" font-size="13" font-weight="700" fill="#fff">MiaCodeAI</text>
+  <text x="450" y="236" font-size="10" fill="#8C97AD" letter-spacing="2">GITHUB</text>
+
+  <!-- inner orbit: the two repositories -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 450 220" to="360 450 220" dur="48s" repeatCount="indefinite"/>
+    <g transform="translate(570 220)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="48s" repeatCount="indefinite"/>
+        <rect x="-74" y="-21" width="148" height="42" rx="21" fill="#0F0B20" stroke="#5CE1E6" stroke-width="1.5" filter="url(#glow)"/>
+        <text x="0" y="-2" font-size="13" font-weight="700" fill="#fff">Mia-Code</text>
+        <text x="0" y="13" font-size="9" fill="#5CE1E6" letter-spacing="2">MAIN REPO</text>
+      </g>
+    </g>
+    <g transform="translate(330 220)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="48s" repeatCount="indefinite"/>
+        <rect x="-74" y="-21" width="148" height="42" rx="21" fill="#0F0B20" stroke="#9B7BFF" stroke-width="1.5" filter="url(#glow)"/>
+        <text x="0" y="-2" font-size="13" font-weight="700" fill="#fff">MiaCodeAI</text>
+        <text x="0" y="13" font-size="9" fill="#9B7BFF" letter-spacing="2">OVERVIEW</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- outer orbit: future extension points -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="360 450 220" to="0 450 220" dur="70s" repeatCount="indefinite"/>
+    <g transform="translate(450 35)">
+      <g><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="70s" repeatCount="indefinite"/>
+        <circle r="6" fill="#5CE1E6" filter="url(#glow)"/><text y="22" font-size="10" fill="#8C97AD" letter-spacing="2">PROVIDERS</text></g>
+    </g>
+    <g transform="translate(610.2 312.5)">
+      <g><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="70s" repeatCount="indefinite"/>
+        <circle r="6" fill="#9B7BFF" filter="url(#glow)"/><text y="22" font-size="10" fill="#8C97AD" letter-spacing="2">TOOLS</text></g>
+    </g>
+    <g transform="translate(289.8 312.5)">
+      <g><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="70s" repeatCount="indefinite"/>
+        <circle r="6" fill="#5CE1E6" filter="url(#glow)"/><text y="22" font-size="10" fill="#8C97AD" letter-spacing="2">PLUGINS</text></g>
+    </g>
+  </g>
+</svg>

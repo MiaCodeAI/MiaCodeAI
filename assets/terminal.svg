@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" role="img" aria-label="Illustrative Mia Code terminal session">
+  <defs>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9B7BFF"/>
+      <stop offset="1" stop-color="#5CE1E6"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B0A16"/>
+      <stop offset="1" stop-color="#0F0B20"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text{font-family:'SF Mono','JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;font-size:15px}
+    .l{opacity:0;animation:show 20s infinite}
+    @keyframes show{0%{opacity:0}1.5%{opacity:1}88%{opacity:1}94%{opacity:0}100%{opacity:0}}
+    .blink{animation:blink 1s steps(2,start) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .dim{fill:#7C879C}.ok{fill:#5CE1E6}.hi{fill:#FF7B9C}.md{fill:#F5C26B}.pr{fill:#9B7BFF}.tx{fill:#D8DFEA}
+  </style>
+
+  <rect x="1" y="1" width="898" height="438" rx="14" fill="url(#bg)" stroke="url(#ac)" stroke-opacity="0.6" stroke-width="1.5"/>
+  <path d="M1 44H899" stroke="#9B7BFF" stroke-opacity="0.25"/>
+  <circle cx="26" cy="23" r="6" fill="#FF5F57"/><circle cx="48" cy="23" r="6" fill="#FEBC2E"/><circle cx="70" cy="23" r="6" fill="#28C840"/>
+  <text x="450" y="28" text-anchor="middle" class="dim" style="font-size:13px">mia  —  illustrative session</text>
+
+  <g>
+    <text x="28" y="82" class="l tx" style="animation-delay:0.4s"><tspan class="pr">$</tspan> mia "Scan my project and tell me what to improve."</text>
+    <text x="28" y="116" class="l dim" style="animation-delay:2s">◆ discovering repository … manifests, scripts, tests</text>
+    <text x="28" y="142" class="l dim" style="animation-delay:3.4s">◆ reading project instructions (MIA.md)</text>
+    <text x="28" y="168" class="l dim" style="animation-delay:4.8s">◆ mode: audit  —  read-only, no files will be modified</text>
+    <text x="28" y="204" class="l ok" style="animation-delay:6.4s">✔ findings prioritized by severity, each with evidence</text>
+    <text x="48" y="232" class="l tx" style="animation-delay:7.8s"><tspan class="hi">HIGH</tspan>   src/auth/login.ts:42    input not validated</text>
+    <text x="48" y="258" class="l tx" style="animation-delay:8.8s"><tspan class="md">MED </tspan>   src/api/client.ts:88    error swallowed silently</text>
+    <text x="48" y="284" class="l tx" style="animation-delay:9.8s"><tspan class="dim">LOW </tspan>   README.md               setup steps missing</text>
+    <text x="28" y="320" class="l ok" style="animation-delay:11.4s">✔ checks reported honestly: passed · failed · could not run · not attempted</text>
+    <text x="28" y="362" class="l tx" style="animation-delay:13s"><tspan class="pr">$</tspan> mia "Fix the top issue, run the tests, explain your changes."</text>
+    <text x="28" y="396" class="l dim" style="animation-delay:14.6s">◆ permission required to edit src/auth/login.ts   [y/N] <tspan class="blink ok">▌</tspan></text>
+  </g>
+</svg>
