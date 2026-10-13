@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.jpeg" alt="Mia Code logo" width="132"/>
+<img src="assets/logo.png" alt="Mia Code logo" width="132"/>
 
 <br/><br/>
 
